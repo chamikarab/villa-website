@@ -24,6 +24,7 @@
     font-family: var(--font-body), system-ui, -apple-system, sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 }
 
