@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { RoomCard } from "@/components/RoomCard";
-import { rooms } from "@/lib/site";
+import { rooms } from "@/lib/rooms";
 
 export const metadata: Metadata = {
   title: "Rooms & Suites",
@@ -30,7 +30,15 @@ export default function RoomsPage() {
         
         <div className="mt-20 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {rooms.map((room) => (
-            <RoomCard key={room.title} {...room} />
+            <RoomCard 
+              key={room.slug} 
+              slug={room.slug}
+              title={room.title}
+              description={room.shortDescription}
+              rate={room.rate}
+              image={room.image}
+              details={room.details}
+            />
           ))}
         </div>
 

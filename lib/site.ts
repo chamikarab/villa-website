@@ -43,6 +43,7 @@ export const highlights = [
 
 export const rooms = [
   {
+    slug: "horizon-suite",
     title: "Horizon Suite",
     description:
       "A panoramic suite with wraparound views, a soaking tub, and bespoke linens.",
@@ -51,6 +52,7 @@ export const rooms = [
     details: ["King bed", "Private terrace", "Ocean view"],
   },
   {
+    slug: "cove-residence",
     title: "Cove Residence",
     description:
       "Two-bedroom residence with open living, curated art, and indoor-outdoor flow.",
@@ -59,6 +61,7 @@ export const rooms = [
     details: ["Two suites", "Chef-ready pantry", "Plunge pool"],
   },
   {
+    slug: "garden-pavilion",
     title: "Garden Pavilion",
     description:
       "A serene retreat wrapped in tropical gardens, ideal for slow mornings.",

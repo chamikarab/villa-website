@@ -3,11 +3,11 @@ import Link from "next/link";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { Hero } from "@/components/Hero";
 import { RoomCard } from "@/components/RoomCard";
+import { rooms } from "@/lib/rooms";
 import {
   amenities,
   galleryImages,
   highlights,
-  rooms,
   siteConfig,
 } from "@/lib/site";
 
@@ -61,7 +61,15 @@ export default function Home() {
           </div>
           <div className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
             {rooms.map((room) => (
-              <RoomCard key={room.title} {...room} />
+              <RoomCard 
+                key={room.slug} 
+                slug={room.slug}
+                title={room.title}
+                description={room.shortDescription}
+                rate={room.rate}
+                image={room.image}
+                details={room.details}
+              />
             ))}
           </div>
           <div className="mt-16 flex justify-center">

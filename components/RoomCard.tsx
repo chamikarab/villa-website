@@ -1,6 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type RoomCardProps = {
+  slug: string;
   title: string;
   description: string;
   rate: string;
@@ -9,6 +11,7 @@ type RoomCardProps = {
 };
 
 export function RoomCard({
+  slug,
   title,
   description,
   rate,
@@ -43,9 +46,12 @@ export function RoomCard({
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-black">
             {rate}
           </p>
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#c5a059] opacity-0 transition duration-300 group-hover:translate-x-1 group-hover:opacity-100">
+          <Link
+            href={`/rooms/${slug}`}
+            className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#c5a059] transition duration-300 hover:translate-x-1"
+          >
             Details →
-          </span>
+          </Link>
         </div>
       </div>
     </article>
