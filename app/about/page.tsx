@@ -11,30 +11,30 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="bg-white">
-      <section className="mx-auto w-full max-w-6xl px-6 py-24">
-        <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div className="space-y-8 fade-up">
-            <div className="space-y-4">
-              <p className="text-[11px] font-bold uppercase tracking-[0.4em] text-zinc-400">
+      <section className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
+        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16">
+          <div className="space-y-6 md:space-y-8 fade-up">
+            <div className="space-y-3 md:space-y-4">
+              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-400 md:text-[11px] md:tracking-[0.4em]">
                 Our Story
               </p>
-              <h1 className="font-display text-5xl leading-tight text-black md:text-7xl">
+              <h1 className="font-display text-4xl leading-tight text-black sm:text-5xl md:text-7xl">
                 A modern villa shaped by coastal light.
               </h1>
             </div>
-            <p className="text-base leading-relaxed text-zinc-600">
+            <p className="text-sm leading-relaxed text-zinc-600 md:text-base">
               {siteConfig.name} blends contemporary architecture with the
               natural rhythm of the southern coast. Designed for privacy and
               ease, every space is oriented toward the sea with flowing indoor
               and outdoor living.
             </p>
-            <p className="text-base leading-relaxed text-zinc-600">
+            <p className="text-sm leading-relaxed text-zinc-600 md:text-base">
               From hand-finished stone to warm timber accents, our interiors
               celebrate craft and quiet luxury. Guests arrive for the ocean, and
               stay for the effortless hospitality.
             </p>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[40px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.1)] fade-up [animation-delay:200ms] border border-[#e2d1a8]">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[32px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.1)] fade-up [animation-delay:200ms] border border-[#e2d1a8] md:rounded-[40px]">
             <Image
               src="/images/experiences/villa-exterior-sunlit.png"
               alt="Villa lounge interior"

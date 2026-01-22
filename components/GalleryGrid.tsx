@@ -11,11 +11,11 @@ type GalleryGridProps = {
 
 export function GalleryGrid({ images }: GalleryGridProps) {
   return (
-    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
       {images.map((image, index) => (
         <div
           key={image.src}
-          className={`group relative overflow-hidden rounded-[32px] bg-white shadow-[0_16px_40px_rgba(0,0,0,0.04)] fade-up border border-[#e2d1a8]`}
+          className={`group relative overflow-hidden rounded-[24px] bg-white shadow-[0_16px_40px_rgba(0,0,0,0.04)] fade-up border border-[#e2d1a8] md:rounded-[32px]`}
           style={{ animationDelay: `${index * 100}ms` }}
         >
           <div className="relative aspect-square">
