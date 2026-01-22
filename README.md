@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Azure Dunes Villa - Luxury Villa Website
 
-## Getting Started
+A modern, premium informative website for Azure Dunes Villa built with Next.js 14. This static website showcases the luxury coastal villa with elegant design, high-quality imagery, and seamless user experience.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Modern Design**: Premium black, white, and gold minimalist aesthetic
+- **Full Responsive**: Mobile-first design that works on all devices
+- **SEO Optimized**: Complete metadata, sitemap, and robots.txt
+- **Static Site Generation**: Optimized for fast loading and easy hosting
+- **Image Gallery**: Beautiful grid layout showcasing villa experiences
+- **Room Showcase**: Detailed information about suites and residences
+- **Contact Forms**: Inquiry and contact forms (ready for Formspree integration)
+- **Smooth Animations**: Elegant fade-up animations and hover effects
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Fonts**: Manrope (body), Playfair Display (headings)
+- **Icons**: Font Awesome 6.5.1
+- **Deployment**: Static export ready (supports shared hosting)
+
+## 📁 Project Structure
+
+```
+villa-website/
+├── app/                    # Next.js App Router pages
+│   ├── about/             # About the villa
+│   ├── rooms/             # Room listings
+│   ├── amenities/         # Villa amenities
+│   ├── gallery/           # Image gallery
+│   ├── location/          # Location information
+│   ├── contact/           # Contact page
+│   ├── book-now/          # Inquiry form
+│   ├── privacy-policy/    # Privacy policy
+│   ├── terms/             # Terms of stay
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Homepage
+│   ├── globals.css        # Global styles
+│   ├── sitemap.ts         # Dynamic sitemap
+│   └── robots.ts          # Robots.txt
+├── components/            # Reusable React components
+│   ├── Header.tsx         # Navigation header
+│   ├── Footer.tsx         # Footer with links
+│   ├── Hero.tsx           # Hero section
+│   ├── RoomCard.tsx       # Room display card
+│   └── GalleryGrid.tsx     # Gallery grid layout
+├── lib/                   # Utilities and config
+│   └── site.ts            # Site configuration
+└── public/                # Static assets
+    └── images/            # Villa images
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18+ 
+- npm or yarn
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/chamikarab/villa-website.git
+   cd villa-website
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Run development server**
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+4. **Open in browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📜 Available Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 🎨 Design System
+
+### Colors
+- **Primary**: Pure White (#FFFFFF)
+- **Secondary**: Absolute Black (#000000)
+- **Accent**: Luxury Gold (#C5A059, #E2D1A8)
+
+### Typography
+- **Headings**: Playfair Display (serif)
+- **Body**: Manrope (sans-serif)
+- **Style**: High tracking, uppercase labels
+
+## 📦 Building for Production
+
+This project is configured for static export, perfect for shared hosting:
+
+```bash
+npm run build
+```
+
+The static files will be generated in the `out/` directory, ready to upload to any web server.
+
+## 🌐 Deployment
+
+### Static Hosting (Recommended)
+- Upload the `out/` folder contents to your hosting provider
+- Works with: Namecheap, GoDaddy, Netlify, Vercel, etc.
+
+### Vercel (Easiest)
+1. Push to GitHub
+2. Import project on Vercel
+3. Deploy automatically
+
+## 📝 Configuration
+
+Update site information in `lib/site.ts`:
+- Villa name and description
+- Contact information
+- Social media links
+- Site URL
+
+## 🖼️ Images
+
+Replace placeholder images in `public/images/`:
+- `hero-1.png` - Homepage hero image
+- `horizon_suite.png` - Horizon Suite room
+- `Cove_Residence.png` - Cove Residence room
+- `Garden_Pavilion.png` - Garden Pavilion room
+- `experiences/` - Gallery images
+
+## 📄 License
+
+This project is private and proprietary.
+
+## 👨‍💻 Developer
+
+**Chamikara Bandara**  
+Website: [chamikarabandara.com](https://chamikarabandara.com)
+
+---
+
+Built with ❤️ using Next.js 14
