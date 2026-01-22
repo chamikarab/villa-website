@@ -110,27 +110,6 @@ This website follows a **premium minimalist** design approach:
 - **White Space**: Generous spacing for a calm, sophisticated look
 - **High Contrast**: Black text on white for maximum readability
 
-## 🔧 Customization
-
-### Adding New Pages
-
-1. Create a new folder in `app/` directory
-2. Add `page.tsx` with metadata and content
-3. Update `lib/site.ts` navigation items if needed
-
-### Adding Images
-
-1. Place images in `public/images/`
-2. Update image paths in `lib/site.ts`
-3. Use Next.js `Image` component for optimization
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
 ## 📄 License
 
 This project is private and proprietary.
