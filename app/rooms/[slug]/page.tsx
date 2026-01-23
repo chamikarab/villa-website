@@ -36,104 +36,177 @@ export default async function RoomDetailsPage({ params }: Props) {
   }
 
   return (
-    <div className="bg-white">
-      {/* Back Link */}
-      <div className="mx-auto max-w-7xl px-6 pt-8 md:px-8 md:pt-12">
-        <Link
-          href="/rooms"
-          className="group inline-flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.3em] text-zinc-400 transition-colors hover:text-black md:text-[10px]"
-        >
-          <span className="transition-transform group-hover:-translate-x-1">←</span>
-          Back to all rooms
-        </Link>
-      </div>
+    <div className="bg-[#faf9f6]">
+      {/* Hero Section */}
+      <section className="relative h-[70vh] w-full overflow-hidden sm:h-[80vh]">
+        <Image
+          src={room.image}
+          alt={room.title}
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#faf9f6] to-transparent h-32" />
+        
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+          <div className="fade-up">
+            <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.5em] text-white/90 sm:text-[11px]">
+              The Collection
+            </p>
+            <h1 className="font-display text-5xl text-white sm:text-7xl md:text-8xl">
+              {room.title}
+            </h1>
+          </div>
+        </div>
 
-      <section className="mx-auto max-w-7xl px-6 py-12 md:px-8 md:py-16">
-        <div className="flex flex-col gap-16 lg:flex-row lg:gap-16">
-          {/* Content Column */}
-          <div className="flex-1 space-y-12 md:space-y-12 fade-up">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <p className="text-[11px] font-bold uppercase tracking-[0.4em] text-[#c5a059] md:text-[11px] md:tracking-[0.5em]">
-                  {room.capacity} • {room.size}
+        {/* Floating Back Button */}
+        <div className="absolute left-6 top-8 z-10 md:left-12 md:top-12">
+          <Link
+            href="/rooms"
+            className="group flex items-center gap-3 rounded-full bg-white/10 px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black"
+          >
+            <i className="fa-solid fa-arrow-left text-[12px] transition-transform group-hover:-translate-x-1" />
+            Back to Collection
+          </Link>
+        </div>
+      </section>
+
+      {/* Overview Section */}
+      <section className="relative z-10 -mt-20 mx-auto max-w-7xl px-6 pb-24 md:px-8">
+        <div className="grid gap-12 lg:grid-cols-[1fr_400px] lg:gap-24">
+          
+          {/* Main Content */}
+          <div className="space-y-16">
+            <div className="rounded-[40px] bg-white p-8 shadow-sm border border-zinc-100/50 md:p-12 fade-up">
+              <div className="mb-12 flex flex-wrap items-center gap-8 border-b border-zinc-100 pb-10 text-[11px] font-bold uppercase tracking-[0.2em] text-[#c5a059]">
+                <span className="flex items-center gap-3">
+                  <i className="fa-solid fa-expand text-xs" />
+                  {room.size}
+                </span>
+                <span className="flex items-center gap-3 text-zinc-400">•</span>
+                <span className="flex items-center gap-3 text-zinc-900">
+                  <i className="fa-solid fa-user-group text-xs" />
+                  {room.capacity}
+                </span>
+                <span className="flex items-center gap-3 text-zinc-400">•</span>
+                <span className="flex items-center gap-3 text-zinc-900">
+                  <i className="fa-solid fa-bed text-xs" />
+                  {room.bedType}
+                </span>
+              </div>
+
+              <div className="space-y-8">
+                <h2 className="font-display text-3xl text-zinc-900 sm:text-4xl">
+                  Refined Coastal Living
+                </h2>
+                <p className="text-lg leading-relaxed text-zinc-600 md:text-xl">
+                  {room.longDescription}
                 </p>
-                <h1 className="font-display text-4xl leading-tight text-black sm:text-5xl md:text-6xl lg:text-7xl">
-                  {room.title}
-                </h1>
               </div>
-              <p className="text-lg font-bold text-black md:text-lg">{room.rate}</p>
-              <p className="max-w-2xl text-base leading-relaxed text-zinc-600 sm:text-base md:text-lg">
-                {room.longDescription}
-              </p>
             </div>
 
-            {/* Gallery Grid */}
-            <div className="grid gap-6 sm:gap-6 md:grid-cols-2">
-              {room.gallery.slice(1).map((img, index) => (
-                <div
-                  key={index}
-                  className="relative aspect-square overflow-hidden rounded-[40px] border border-[#e2d1a8]/40 md:rounded-[32px]"
-                >
-                  <Image
-                    src={img}
-                    alt={`${room.title} detail ${index + 1}`}
-                    fill
-                    className="object-cover transition duration-700 hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 40vw"
-                  />
+            {/* Gallery Section */}
+            <div className="space-y-12">
+              <div className="flex items-end justify-between">
+                <div className="space-y-4">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#c5a059]">
+                    Gallery
+                  </p>
+                  <h3 className="font-display text-3xl text-zinc-900 sm:text-4xl">
+                    Interior Narratives
+                  </h3>
                 </div>
-              ))}
-            </div>
-
-            {/* Bed Type & Capacity Table */}
-            <div className="grid grid-cols-2 gap-8 border-y border-zinc-100 py-10 md:gap-8 md:py-10">
-              <div className="space-y-3">
-                <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-zinc-400">Bed Configuration</p>
-                <p className="font-display text-xl text-black md:text-2xl">{room.bedType}</p>
               </div>
-              <div className="space-y-3">
-                <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-zinc-400">Guest Capacity</p>
-                <p className="font-display text-xl text-black md:text-2xl">{room.capacity}</p>
+              
+              <div className="grid gap-6 md:grid-cols-2">
+                {room.gallery.slice(1).map((img, index) => (
+                  <div
+                    key={index}
+                    className={`relative overflow-hidden rounded-[32px] border border-zinc-200/50 group ${
+                      index === 0 ? "aspect-[4/5]" : "aspect-[4/5] md:translate-y-12"
+                    }`}
+                  >
+                    <Image
+                      src={img}
+                      alt={`${room.title} detail ${index + 1}`}
+                      fill
+                      className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
           {/* Sticky Sidebar */}
-          <div className="w-full space-y-10 lg:sticky lg:top-32 lg:w-[380px] xl:w-[420px]">
-            {/* Hero Image in Sidebar or Main */}
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[40px] shadow-[0_40px_100px_-30px_rgba(0,0,0,0.1)] border border-[#e2d1a8] fade-up [animation-delay:200ms] md:rounded-[40px]">
-              <Image
-                src={room.image}
-                alt={room.title}
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, 40vw"
-              />
+          <aside className="lg:sticky lg:top-32 h-fit space-y-8">
+            <div className="rounded-[40px] bg-white p-10 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.03)] border border-[#e2d1a8]/30 fade-up [animation-delay:200ms]">
+              <div className="mb-8 space-y-2">
+                <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-zinc-400">Nightly Rate</p>
+                <p className="font-display text-4xl text-zinc-900">{room.rate}</p>
+              </div>
+
+              <div className="mb-10 space-y-6">
+                <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#c5a059]">In-Suite Amenities</p>
+                <ul className="space-y-5">
+                  {room.amenities.map((amenity) => (
+                    <li key={amenity} className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.15em] text-zinc-600 transition-colors hover:text-black">
+                      <span className="h-[1px] w-4 bg-[#c5a059]" />
+                      {amenity}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <Link
+                href="/book-now"
+                className="group relative flex w-full items-center justify-center overflow-hidden rounded-full bg-zinc-900 py-5 text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-all hover:bg-white hover:text-zinc-900 border border-zinc-900"
+              >
+                <span className="relative z-10">Reserve This Experience</span>
+                <div className="absolute inset-0 z-0 translate-y-full bg-white transition-transform duration-300 group-hover:translate-y-0" />
+              </Link>
+              
+              <p className="mt-6 text-center text-[10px] font-medium uppercase tracking-[0.1em] text-zinc-400">
+                Inquiry Response within 12 hours
+              </p>
             </div>
 
-            {/* Amenities Card */}
-            <div className="rounded-[40px] bg-white p-10 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] border border-[#e2d1a8]/30 fade-up [animation-delay:300ms] md:rounded-[40px] md:p-10">
-              <p className="mb-8 text-[11px] font-bold uppercase tracking-[0.4em] text-[#c5a059]">Suite Amenities</p>
-              <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-1 md:gap-4">
-                {room.amenities.map((amenity) => (
-                  <li key={amenity} className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.15em] text-zinc-600 md:gap-4 md:text-xs md:tracking-[0.2em]">
-                    <span className="h-2 w-2 shrink-0 rounded-full bg-[#c5a059]" />
-                    {amenity}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-10 pt-10 border-t border-zinc-100 md:mt-10 md:pt-10">
-                <Link
-                  href="/book-now"
-                  className="group relative flex w-full items-center justify-center overflow-hidden rounded-full border border-black bg-black py-5 text-[11px] font-bold uppercase tracking-[0.4em] text-white transition-all hover:bg-transparent hover:text-black md:py-5"
-                >
-                  <span className="relative z-10">Reserve Stay</span>
-                  <div className="absolute inset-0 z-0 translate-y-full bg-white transition-transform duration-300 group-hover:translate-y-0" />
-                </Link>
-              </div>
+            {/* Support Card */}
+            <div className="rounded-[40px] bg-[#c5a059] p-10 text-white fade-up [animation-delay:300ms]">
+              <h4 className="mb-4 font-display text-2xl">Concierge Service</h4>
+              <p className="mb-8 text-xs leading-relaxed opacity-90">
+                Need assistance with your booking or have special requests? Our dedicated villa concierge is available 24/7.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] transition-transform hover:translate-x-1"
+              >
+                Connect with us <i className="fa-solid fa-arrow-right" />
+              </Link>
             </div>
-          </div>
+          </aside>
+
+        </div>
+      </section>
+
+      {/* Bottom CTA / Next Room Suggestion */}
+      <section className="border-t border-zinc-100 bg-white py-24">
+        <div className="mx-auto max-w-7xl px-6 text-center md:px-8">
+          <p className="mb-8 text-[10px] font-bold uppercase tracking-[0.5em] text-[#c5a059]">
+            Beyond This Suite
+          </p>
+          <h2 className="mb-12 font-display text-4xl text-zinc-900 md:text-6xl lg:text-7xl">
+            Explore more of the estate.
+          </h2>
+          <Link
+            href="/rooms"
+            className="inline-flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.4em] text-zinc-900 transition-colors hover:text-[#c5a059]"
+          >
+            All Accommodations <i className="fa-solid fa-chevron-right text-[10px]" />
+          </Link>
         </div>
       </section>
     </div>
