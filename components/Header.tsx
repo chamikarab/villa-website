@@ -9,16 +9,16 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#e2d1a8]/30 bg-white/80 backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8 md:py-6">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-6 py-4 md:px-8 md:py-6">
         {/* Branding */}
         <Link
           href="/"
           className="group flex flex-col items-start gap-0.5 transition-opacity hover:opacity-80 md:items-center md:text-center"
         >
-          <span className="font-display text-lg uppercase tracking-[0.3em] text-black sm:text-xl md:text-2xl md:tracking-[0.4em]">
+          <span className="font-display text-2xl uppercase tracking-[0.3em] text-black sm:text-2xl md:tracking-[0.4em]">
             {siteConfig.name.split(" ")[0]}
           </span>
-          <span className="text-[6px] font-bold uppercase tracking-[0.6em] text-[#c5a059] sm:text-[7px] md:text-[9px] md:tracking-[0.8em]">
+          <span className="text-[10px] font-bold uppercase tracking-[0.6em] text-[#c5a059] md:tracking-[0.8em]">
             {siteConfig.name.split(" ").slice(1).join(" ")}
           </span>
         </Link>
@@ -79,13 +79,13 @@ export function Header() {
             : "max-h-0 overflow-hidden opacity-0"
         }`}
       >
-        <nav className="flex flex-col items-center gap-8 px-6">
+        <nav className="flex flex-col items-center gap-10 px-6">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className="text-[11px] font-bold uppercase tracking-[0.4em] text-black/60 transition-colors hover:text-black"
+              className="text-[13px] font-bold uppercase tracking-[0.4em] text-black/60 transition-colors hover:text-black sm:text-[14px]"
             >
               {item.label}
             </Link>
@@ -93,7 +93,7 @@ export function Header() {
           <Link
             href="/book-now"
             onClick={() => setIsOpen(false)}
-            className="mt-6 w-full rounded-full bg-black py-4 text-center text-[10px] font-bold uppercase tracking-[0.4em] text-white sm:hidden"
+            className="mt-8 w-full rounded-full bg-black py-5 text-center text-[11px] font-bold uppercase tracking-[0.4em] text-white sm:hidden"
           >
             Reserve Stay
           </Link>
