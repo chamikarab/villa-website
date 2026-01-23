@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="bg-white">
-      <section className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16">
-          <div className="space-y-6 md:space-y-8 fade-up">
-            <div className="space-y-3 md:space-y-4">
-              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-400 md:text-[11px] md:tracking-[0.4em]">
+      <section className="mx-auto w-full max-w-6xl px-6 py-20 md:py-24">
+        <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16">
+          <div className="space-y-8 md:space-y-8 fade-up">
+            <div className="space-y-4 md:space-y-4">
+              <p className="text-[11px] font-bold uppercase tracking-[0.4em] text-zinc-400">
                 Our Story
               </p>
               <h1 className="font-display text-4xl leading-tight text-black sm:text-5xl md:text-7xl">
@@ -34,7 +34,7 @@ export default function AboutPage() {
               stay for the effortless hospitality.
             </p>
           </div>
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[32px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.1)] fade-up [animation-delay:200ms] border border-[#e2d1a8] md:rounded-[40px]">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[40px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.1)] fade-up [animation-delay:200ms] border border-[#e2d1a8] md:rounded-[40px]">
             <Image
               src="/images/experiences/villa-exterior-sunlit.png"
               alt="Villa lounge interior"
@@ -64,13 +64,13 @@ export default function AboutPage() {
           ].map((item, index) => (
             <div
               key={item.title}
-              className="card-glass rounded-[32px] p-10 fade-up border-[#e2d1a8]"
+              className="card-glass rounded-[40px] p-10 fade-up border-[#e2d1a8]"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <h2 className="font-display text-2xl tracking-wide text-black">
                 {item.title}
               </h2>
-              <p className="mt-4 text-sm leading-relaxed text-zinc-600">
+              <p className="mt-5 text-sm leading-relaxed text-zinc-600">
                 {item.text}
               </p>
             </div>
