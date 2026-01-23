@@ -10,39 +10,74 @@ export const metadata: Metadata = {
 
 export default function AmenitiesPage() {
   return (
-    <div className="bg-white">
-      <section className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-          <div className="space-y-8 md:space-y-10 fade-up">
-            <div className="space-y-3 md:space-y-4">
-              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-400 md:text-[11px] md:tracking-[0.4em]">
-                Amenities
+    <div className="bg-[#faf9f6]">
+      {/* Hero Section */}
+      <section className="relative h-[60vh] w-full overflow-hidden">
+        <Image
+          src="/images/amenities-hero.png"
+          alt="Luxury Amenities"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-white">
+          <div className="fade-up">
+            <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.5em] text-white/80 sm:text-[11px]">
+              Services & Comforts
+            </p>
+            <h1 className="font-display text-5xl sm:text-7xl md:text-8xl">
+              Amenities
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-6 py-24 md:px-8">
+        <div className="grid gap-20 lg:grid-cols-2 lg:items-start lg:gap-24">
+          <div className="space-y-12 fade-up">
+            <div className="space-y-6">
+              <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#c5a059]">
+                Tailored for Indulgence
               </p>
-              <h1 className="font-display text-4xl leading-tight text-black sm:text-5xl md:text-7xl">
+              <h2 className="font-display text-4xl leading-tight text-zinc-900 sm:text-5xl md:text-6xl">
                 Elevated comforts, curated for you.
-              </h1>
+              </h2>
             </div>
-            <p className="text-sm leading-relaxed text-zinc-600 md:text-base">
+            
+            <p className="text-lg leading-relaxed text-zinc-600">
               Whether you prefer mornings by the infinity pool or evenings with a 
               private chef, our amenities make every stay effortless and indulgent.
+              We believe luxury lies in the details that allow you to truly exhale.
             </p>
-            <div className="grid gap-3 rounded-[32px] bg-white p-8 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.08)] border border-[#e2d1a8] md:gap-4 md:rounded-[40px] md:p-10">
+
+            <div className="grid gap-6 rounded-[48px] bg-white p-12 shadow-[0_40px_100px_-30px_rgba(0,0,0,0.05)] border border-zinc-100">
               {amenities.map((amenity) => (
-                <div key={amenity} className="flex items-center gap-3 border-b border-[#e2d1a8]/40 pb-3 text-xs font-medium text-zinc-600 last:border-b-0 md:gap-4 md:pb-4 md:text-sm">
-                  <span className="h-1 w-1 shrink-0 rounded-full bg-[#c5a059]" />
+                <div key={amenity} className="flex items-center gap-6 border-b border-zinc-50 pb-6 text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-600 last:border-b-0">
+                  <span className="h-[1px] w-6 bg-[#c5a059]" />
                   {amenity}
                 </div>
               ))}
             </div>
           </div>
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[32px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.1)] fade-up [animation-delay:200ms] border border-[#e2d1a8] md:rounded-[40px]">
-            <Image
-              src="/images/experiences/spa-wellness-pavilion.png"
-              alt="Spa and wellness pavilion"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+
+          <div className="space-y-8">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[48px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.05)] border border-[#e2d1a8]/30 fade-up [animation-delay:200ms]">
+              <Image
+                src="/images/experiences/infinity-pool-dusk.png"
+                alt="Infinity Pool"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <div className="rounded-[40px] bg-white p-10 border border-zinc-100 shadow-sm fade-up [animation-delay:300ms]">
+              <h3 className="font-display text-2xl mb-4">Wellness & Recovery</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                Complement your stay with private yoga sessions, on-site spa treatments, 
+                and a curated selection of organic bath products.
+              </p>
+            </div>
           </div>
         </div>
       </section>
