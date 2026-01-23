@@ -30,25 +30,25 @@ export function RoomCard({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-transparent" />
       </div>
-      <div className="space-y-4 p-6 md:space-y-5 md:p-8">
-        <div className="space-y-2">
-          <h3 className="font-display text-xl tracking-wide text-black md:text-2xl">{title}</h3>
-          <p className="text-xs leading-relaxed text-zinc-600 md:text-sm">{description}</p>
+      <div className="space-y-5 p-7 md:space-y-5 md:p-8">
+        <div className="space-y-3">
+          <h3 className="font-display text-2xl tracking-wide text-black md:text-2xl">{title}</h3>
+          <p className="text-sm leading-relaxed text-zinc-600 md:text-base">{description}</p>
         </div>
-        <ul className="flex flex-wrap gap-3 border-y border-[#e2d1a8]/50 py-3 md:gap-4 md:py-4">
+        <ul className="flex flex-wrap gap-3 border-y border-[#e2d1a8]/50 py-4 md:gap-4 md:py-4">
           {details.map((detail) => (
-            <li key={detail} className="text-[8px] font-bold uppercase tracking-[0.2em] text-zinc-400 md:text-[10px] md:tracking-[0.25em]">
+            <li key={detail} className="text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-400 md:tracking-[0.25em]">
               {detail}
             </li>
           ))}
         </ul>
-        <div className="flex items-center justify-between pt-1 md:pt-2">
-          <p className="text-xs font-bold uppercase tracking-[0.15em] text-black md:text-sm md:tracking-[0.2em]">
+        <div className="flex items-center justify-between pt-2 md:pt-2">
+          <p className="text-sm font-bold uppercase tracking-[0.15em] text-black md:text-base md:tracking-[0.2em]">
             {rate}
           </p>
           <Link
             href={`/rooms/${slug}`}
-            className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#c5a059] transition duration-300 hover:translate-x-1"
+            className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#c5a059] transition duration-300 hover:translate-x-1"
           >
             Details →
           </Link>

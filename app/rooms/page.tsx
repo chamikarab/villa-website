@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 export default function RoomsPage() {
   return (
     <div className="bg-white">
-      <section className="mx-auto w-full max-w-6xl px-6 py-16 md:py-24">
-        <div className="flex flex-col items-center gap-4 text-center md:gap-6">
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-400 md:text-[11px] md:tracking-[0.4em]">
+      <section className="mx-auto w-full max-w-6xl px-6 py-20 md:py-24">
+        <div className="flex flex-col items-center gap-5 text-center md:gap-6">
+          <p className="text-[11px] font-bold uppercase tracking-[0.4em] text-zinc-400">
             Rooms & Suites
           </p>
           <h1 className="font-display text-4xl leading-tight text-black sm:text-5xl md:text-7xl">
@@ -25,10 +25,10 @@ export default function RoomsPage() {
             materials, and thoughtful privacy. Share your preferred suite, and
             we will curate your stay.
           </p>
-          <div className="mt-2 h-0.5 w-10 bg-black md:mt-4 md:w-12" />
+          <div className="mt-3 h-0.5 w-12 bg-black md:mt-4" />
         </div>
         
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 md:mt-20 md:gap-10">
+        <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 md:mt-20 md:gap-10">
           {rooms.map((room) => (
             <RoomCard 
               key={room.slug} 
@@ -42,16 +42,16 @@ export default function RoomsPage() {
           ))}
         </div>
 
-        <div className="mt-16 relative overflow-hidden rounded-[32px] bg-white border border-[#e2d1a8] p-8 text-center text-black fade-up md:mt-24 md:rounded-[40px] md:p-12">
-          <div className="relative z-10 space-y-4 md:space-y-6">
-            <h2 className="font-display text-2xl md:text-4xl text-black">Looking for a custom arrangement?</h2>
-            <p className="mx-auto max-w-xl text-xs text-zinc-600 md:text-sm">
+        <div className="mt-20 relative overflow-hidden rounded-[40px] bg-white border border-[#e2d1a8] p-10 text-center text-black fade-up md:mt-24 md:rounded-[40px] md:p-12">
+          <div className="relative z-10 space-y-6 md:space-y-6">
+            <h2 className="font-display text-3xl md:text-4xl text-black">Looking for a custom arrangement?</h2>
+            <p className="mx-auto max-w-xl text-sm text-zinc-600 md:text-sm">
               Our concierge is ready to assist with tailored itineraries, 
               extended stays, and specific privacy requests.
             </p>
             <Link
               href="/book-now"
-              className="inline-flex rounded-full bg-black px-8 py-3.5 text-[10px] font-bold uppercase tracking-[0.3em] text-white transition hover:bg-zinc-800 md:px-10 md:py-4 md:text-[11px]"
+              className="w-full sm:w-auto inline-flex justify-center rounded-full bg-black px-12 py-5 text-[11px] font-bold uppercase tracking-[0.4em] text-white transition hover:bg-zinc-800"
             >
               Start Inquiry
             </Link>
