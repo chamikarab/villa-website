@@ -15,10 +15,10 @@ export function Header() {
           href="/"
           className="group flex flex-col items-start gap-0.5 transition-opacity hover:opacity-80 md:items-center md:text-center"
         >
-          <span className="font-display text-2xl uppercase tracking-[0.3em] text-black sm:text-2xl md:tracking-[0.4em]">
+          <span className="font-display text-xl uppercase tracking-[0.2em] text-black sm:text-2xl md:tracking-[0.4em]">
             {siteConfig.name.split(" ")[0]}
           </span>
-          <span className="text-[10px] font-bold uppercase tracking-[0.6em] text-[#c5a059] md:tracking-[0.8em]">
+          <span className="text-[8px] font-bold uppercase tracking-[0.4em] text-[#c5a059] sm:text-[10px] md:tracking-[0.8em]">
             {siteConfig.name.split(" ").slice(1).join(" ")}
           </span>
         </Link>

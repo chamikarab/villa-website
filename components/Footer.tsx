@@ -10,11 +10,11 @@ export function Footer() {
           <div className="w-full lg:w-1/3 space-y-8 md:space-y-12">
             <div className="space-y-4">
               <Link href="/" className="inline-block">
-                <h2 className="font-display text-3xl uppercase tracking-[0.3em] text-white md:text-4xl">
+                <h2 className="font-display text-2xl uppercase tracking-[0.2em] text-white sm:text-3xl md:text-4xl md:tracking-[0.3em]">
                   {siteConfig.name}
                 </h2>
               </Link>
-              <p className="text-[10px] font-bold uppercase tracking-[0.5em] text-[#c5a059] md:text-[11px] md:tracking-[0.6em]">
+              <p className="text-[9px] font-bold uppercase tracking-[0.4em] text-[#c5a059] sm:text-[10px] md:text-[11px] md:tracking-[0.6em]">
                 COASTAL LUXURY
               </p>
             </div>

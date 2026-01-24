@@ -39,14 +39,14 @@ export function Hero({
 
       {/* Hero Content */}
       <div className="relative mx-auto flex h-full max-w-7xl flex-col items-center justify-center px-6 text-center text-white md:px-8">
-        <div className="flex w-full flex-col items-center gap-8 md:gap-10 fade-up">
+        <div className="flex w-full flex-col items-center gap-6 md:gap-10 fade-up">
           <div className="w-full space-y-4 md:space-y-6">
-            <p className="flex items-center justify-center gap-3 text-[11px] font-bold uppercase tracking-[0.5em] text-[#e2d1a8] md:gap-4 md:tracking-[0.8em]">
+            <p className="flex items-center justify-center gap-3 text-[9px] font-bold uppercase tracking-[0.4em] text-[#e2d1a8] sm:text-[11px] md:gap-4 md:tracking-[0.8em]">
               <span className="hidden h-[1px] w-5 bg-[#e2d1a8]/40 sm:block sm:w-8" />
               Private Coastal Sanctuary
               <span className="hidden h-[1px] w-5 bg-[#e2d1a8]/40 sm:block sm:w-8" />
             </p>
-            <h1 className="font-display text-5xl leading-[1.2] tracking-tight sm:text-6xl md:text-8xl md:leading-[1.05] lg:text-9xl">
+            <h1 className="font-display text-4xl leading-[1.2] tracking-tight sm:text-6xl md:text-8xl md:leading-[1.05] lg:text-9xl">
               {title.split(' ').map((word, i) => (
                 <span key={i} className={i % 2 === 1 ? "text-[#e2d1a8]" : ""}>
                   {word}{' '}
@@ -55,7 +55,7 @@ export function Hero({
             </h1>
           </div>
           
-          <p className="max-w-xl text-sm font-medium leading-relaxed tracking-wide text-zinc-300 sm:text-base md:text-lg">
+          <p className="max-w-xl text-xs font-medium leading-relaxed tracking-wide text-zinc-300 sm:text-base md:text-lg">
             {subtitle}
           </p>
 
