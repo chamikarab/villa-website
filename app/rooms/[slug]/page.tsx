@@ -52,10 +52,10 @@ export default async function RoomDetailsPage({ params }: Props) {
         
         <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
           <div className="fade-up">
-            <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.5em] text-white/90 sm:text-[11px]">
+            <p className="mb-4 text-[9px] font-bold uppercase tracking-[0.4em] text-white/90 sm:text-[11px]">
               The Collection
             </p>
-            <h1 className="font-display text-5xl text-white sm:text-7xl md:text-8xl">
+            <h1 className="font-display text-4xl text-white sm:text-7xl md:text-8xl">
               {room.title}
             </h1>
           </div>
